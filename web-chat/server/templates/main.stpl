@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chat Server</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="./assets/main.css">
+  </head>
+  <body>
+    <dialog id="login-modal" <% if username.is_none() { %>open<% } %>>
+      <h3>Log in to chat</h3>
+      <form action="login" method="post">
+        <label>Username: <input type="text" name="username" autocomplete="off" /></label>
+        <input type="submit" value="Log in" />
+      </form>
+      <script defer>
+        let modal = document.querySelector("#login-modal"); if (modal.open) { modal.close(); modal.showModal() }
+      </script>
+    </dialog>
+    <aside class="sidebar">
+    <details class="sidebar-collapse" open>
+      <summary><h3>Toggle Sidebar</h3></summary>
+      <div class="sidebar-inner">
+        <div class="channels">
+          <h3>Channel list</h3>
+          <ul id="channel-list">
+          </ul>
+        </div>
+        <div class="account">
+          <% if let Some(user) = &username { %>
+            <h3>Logged in as <span id="username"><%= user %></span></h3>
+            <form action="logout" method="post">
+              <input type="submit" value="Log out" />
+            </form>
+          <% } else { %>
+            <h3>Log in to chat</h3>
+            <form action="login" method="post">
+              <label>Username: <input type="text" name="username" /></label>
+              <input type="submit" value="Log in" />
+            </form>
+          <% } %>
+        </div>
+      </div>
+    </details>
+    </aside>
+    <main class="main">
+      <div id="chat-wrapper">
+      <div id="chat">
+      </div>
+      </div>
+      <form id="chatbox" action="send" method="post">
+        <input type="text" name="message" autocomplete="off" <% if username.is_none() { %>disabled<% } %> />
+        <input type="submit" value="Send" <% if username.is_none() { %>disabled<% } %> />
+      </form>
+    </main>
+    <script src="./assets/run.js" type="module"></script>
+  </body>
+</html>

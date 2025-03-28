@@ -1,0 +1,1 @@
+This is the intersection of 24th and Whitis, right next to the Littlefield House facing the honors quad.

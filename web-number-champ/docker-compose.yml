@@ -1,0 +1,10 @@
+version: "2.4"
+services:
+  web-number:
+    build:
+      context: .
+    cpus: 1
+    mem_limit: 300M
+    ports:
+      - "10.10.0.15:9679:5000"
+    read_only: true

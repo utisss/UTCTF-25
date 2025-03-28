@@ -1,0 +1,19 @@
+name: "DCΔ"
+category: Cryptography
+description: |
+  Due to a national shortage of primes, the US Department of Agriculture is rationing all citizens
+  to a limit of one generated prime number per CTF challenge.
+
+  By Sasha (@kyrili on discord)
+author: Sasha
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 300
+  minimum: 100
+flags:
+  - utflag{th3_t0t13nt_funct10n_uns1mpl1f13d}
+files:
+  - rsa.txt
+state: hidden

@@ -1,0 +1,13 @@
+version: "2.4"
+services:
+  secbof:
+    build:
+      context: .
+      args: 
+        FLAG: "utflag{r0p_with_4_littl3_catch}"
+        USER: "secbof"
+    cpus: 1
+    mem_limit: 150M
+    ports:
+      - "5141:9000"
+    read_only: true

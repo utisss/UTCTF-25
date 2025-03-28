@@ -1,0 +1,1 @@
+This is Inner Campus Dr right outside of Garrison Hall where they're doing construction between Mezes, Garrison and the business school.

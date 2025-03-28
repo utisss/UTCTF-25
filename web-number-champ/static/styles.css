@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    background-image: url('https://www.transparenttextures.com/patterns/graph-paper.png');
+    background-color: #f8f9fa;
+}
+
+* {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+h1 {
+    font-family: "Georgia", serif;
+    font-weight: bold;
+    text-shadow: 2px 2px #d3d3d3;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+button {
+    font-size: 1rem;
+}
+
+input {
+    font-size: 1rem;
+}

@@ -1,0 +1,2 @@
+The idea behind this one is just to brute force the flag character by character. The similarity metric shouldn't be too hard to figure out (it's just adding the XORs of each character). I am a little scared that this problem might crash if lots of people are doing things at the same time but hopefully it does not.
+Also the leaderboard should reset occasionally or else there will be too many names on there.

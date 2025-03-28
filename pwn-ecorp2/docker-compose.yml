@@ -1,0 +1,14 @@
+services:
+  pwn-ecorp2:
+    build:
+      context: .
+      args:
+        FLAG: "utflag{tH3_aRt_0f_c0nfU5!On}"
+    deploy:
+      resources:
+        limits:
+          cpus: 0.5
+          memory: 150M
+    ports:
+      - "6128:9000"
+    read_only: false

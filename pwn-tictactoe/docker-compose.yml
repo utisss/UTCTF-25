@@ -1,0 +1,13 @@
+version: "2.4"
+services:
+  pwn-tictactoe:
+    build:
+      context: .
+      args: 
+        FLAG: "utflag{!pr0_g4m3r_4l3rt!}"
+        USER: "tictactoe"
+    cpus: 1
+    mem_limit: 150M
+    ports:
+      - "7114:9000"
+    read_only: true

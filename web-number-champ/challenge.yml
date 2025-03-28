@@ -1,0 +1,27 @@
+name: "Number Champion"
+category: Web
+description: |
+  The number 1 player in this game, geopy hit 3000 elo last week. I want to figure out where they train to be the best.
+
+  Flag is the address of this player (according to google maps), in the following format all lowercase:
+
+  utflag{<street-address>-<city>-<zip-code>}
+
+  For example, if the address is 110 Inner Campus Drive, Austin, TX 78705, the flag would be utflag{110-inner-campus-drive-austin-78705}
+
+  By Samintell (@Samintell on discord)
+author: Samintell
+type: dynamic
+extra:
+  initial: 1000
+  decay: 300
+  minimum: 100
+connection_info: https://challenge.utctf.live:9679
+flags:
+  - 1059 S High St, Columbus, OH 43206
+  - utflag{1059-s-high-st-columbus-43206}
+  - utflag{1059-s-high-street-columbus-43206}
+  - utflag{1059-south-high-st-columbus-43206}
+  - utflag{1059-south-high-street-columbus-43206}
+# remove the files key entirely if the challenge should contain no files
+state: hidden

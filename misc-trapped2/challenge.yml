@@ -1,0 +1,19 @@
+name: "Trapped in Plain Sight 2"
+category: Misc
+description: |
+  Only the chosen may see.
+
+  The password is `password`.
+
+  by Caleb (@eden.caleb.a on discord)
+author: Caleb (@eden.caleb.a)
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 300
+  minimum: 100
+connection_info: ssh -p 4302 trapped@challenge.utctf.live
+flags:
+  - utflag{4ccess_unc0ntroll3d}
+state: hidden

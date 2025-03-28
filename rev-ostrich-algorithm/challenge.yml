@@ -1,0 +1,17 @@
+name: "Ostrich Algorithm"
+category: Reverse Engineering
+description: |
+  The worst algorithm, except for all the rest.
+  By Anthony (@stuckin414141 on discord)
+author: stuckin414141
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 50
+  minimum: 100
+flags:
+  - "utflag{d686e9b8f13bef2a3078c324ceafd25d}"
+files:
+  - chal
+state: hidden

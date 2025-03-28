@@ -1,0 +1,17 @@
+name: "Maps"
+category: Reverse Engineering
+description: |
+  The map has replaced the world.
+  By Anthony (@stuckin414141 on discord)
+author: stuckin414141
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 50
+  minimum: 100
+flags:
+  - "utflag{shouldve_used_haskell_thonk}"
+files:
+  - chal
+state: hidden

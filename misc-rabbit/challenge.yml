@@ -1,0 +1,19 @@
+name: "Down the Rabbit Hole"
+category: Misc
+description: |
+  Join our Discord and find the flag. https://discord.gg/RDDNTV7F62
+
+  Note: The initial scope for this challenge is just the Discord server itself, and not any
+  persons or individuals. Unofficial content is not in scope.
+
+  By Sasha (@kyrili on discord)
+author: Sasha
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 300
+  minimum: 100
+flags:
+  - "utflag{f0ll0w1ng_th3_wh1t3_r4bb1t_:3}"
+state: hidden

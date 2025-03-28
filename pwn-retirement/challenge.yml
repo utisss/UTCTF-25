@@ -1,0 +1,18 @@
+name: "RETirement Plan"
+category: Binary Exploitation
+description: |
+  by pavn
+author: pavn
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 300
+  minimum: 100
+connection_info: nc challenge.utftc.live 9009
+flags:
+  - utflag{i_should_be_doing_ccdc_rn}
+files:
+  - shellcode
+  - libc-2.23.so
+state: hidden

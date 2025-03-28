@@ -1,0 +1,1 @@
+super easy buffer overflow, the playerwin variable is located a little further down from initial input 

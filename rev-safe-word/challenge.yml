@@ -1,0 +1,17 @@
+name: "Safe Word"
+category: Reverse Engineering
+description: |
+  Those Who Know.
+  By Anthony (@stuckin414141 on discord)
+author: stuckin414141
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 50
+  minimum: 100
+flags:
+  - "utflag{i_wanna_play_hypixel_but_mc_not_in_c}"
+files:
+  - safe_word
+state: hidden

@@ -1,0 +1,19 @@
+name: "secbof"
+category: Binary Exploitation
+description: |
+  A buffer overflow, but secure. 
+  Flag can be accessed at "./flag.txt"
+  By Anthony (@stuckin414141 on discord)
+author: stuckin414141
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 25
+  minimum: 100
+connection_info: nc challenge.utctf.live 5141
+flags:
+  - utflag{r0p_with_4_littl3_catch}
+files:
+  - chal
+state: hidden

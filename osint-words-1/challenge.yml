@@ -1,0 +1,23 @@
+name: "Three Words 1"
+category: OSINT
+description: |
+  The three words I would use to describe this location are...
+
+  Flag format: utflag{word1.word2.word3}
+
+  By Sasha (@kyrili on discord)
+author: Sasha
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 300
+  minimum: 100
+files:
+  - image.png
+flags:
+  - "utflag{kinks.overhead.loss}"
+  - "utflag{online.animate.quietly}"
+  - "utflag{succeed.goggle.gent}"
+  - "utflag{unwell.back.bedding}"
+state: hidden

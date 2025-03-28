@@ -1,0 +1,12 @@
+version: "2.4"
+services:
+  crypto-ecb:
+    build:
+      context: .
+      args: 
+        USER: "name"
+    cpus: 2
+    mem_limit: 150M
+    ports:
+      - "7150:9000"
+    read_only: true

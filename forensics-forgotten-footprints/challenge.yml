@@ -1,0 +1,20 @@
+name: "Forgotten Footprints"
+category: Forensics
+description: |
+  I didn't want anyone to find the flag, so I hid it away. Unfortunately, I seem to have misplaced it.
+
+  https://drive.google.com/file/d/1L75zJ1ha1-myAM3vL_C6lpT8VJe1XQHB/view?usp=sharing
+
+  by Caleb (@eden.caleb.a on discord)
+author: Caleb (@eden.caleb.a)
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 300
+  minimum: 100
+flags:
+  - utflag{d3l3t3d_bu7_n0t_g0n3_4ever}
+files:
+  - disk.img
+state: hidden

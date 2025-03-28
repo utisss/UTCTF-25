@@ -1,0 +1,31 @@
+version: "2"
+services:
+    www-sqli:
+        restart: always
+        build: 
+            context: .
+        ports:
+            - "3725:80"
+        volumes:
+            - ./public_html:/var/www/html/
+        links:
+            - db-sqli
+        networks:
+            - default
+    db-sqli:
+        restart: always
+        image: mysql:5.7.13
+        ports:
+            - "3305:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: GBr^92@&wf+Ebq3w!CsTP4%Mr6+_
+            MYSQL_USER: sqli-user
+            MYSQL_DATABASE: SqliDB
+            MYSQL_PASSWORD: AxU3a9w-azMC7LKzxrVJ^tu5qnM_98Eb
+        volumes:
+            - ./mysql:/docker-entrypoint-initdb.d
+            - persistent:/var/lib/mysql
+        networks:
+            - default
+volumes:
+    persistent:

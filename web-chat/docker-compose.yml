@@ -1,0 +1,13 @@
+version: "2.4"
+services:
+  web-chat:
+    build:
+      context: .
+      args: []
+    environment:
+      FLAG: "utflag{32c6FLiaX5in9MhkPNDeYBUY}"
+    cpus: 1
+    mem_limit: 150M
+    ports:
+      - "5213:9000"
+    read_only: true

@@ -1,0 +1,19 @@
+name: "Trapped in Plain Sight 1"
+category: Misc
+description: |
+  Just try to read my flag. 0x0
+
+  The password is `password`.
+
+  by Caleb (@eden.caleb.a on discord)
+author: Caleb (@eden.caleb.a)
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 300
+  minimum: 100
+connection_info: ssh -p 4301 trapped@challenge.utctf.live
+flags:
+  - utflag{SpeciaL_Permissionz}
+state: hidden

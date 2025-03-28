@@ -1,0 +1,19 @@
+name: "Retro Cookie Clicker"
+category: Reverse Engineering
+description: |
+  Gotta click em all!
+
+  by sasha (@kyrili on discord)
+author: sasha
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 300
+  minimum: 100
+flags:
+  - utflag{1337hax0r}
+  - utflag{1337haxOr}
+files:
+  - retro-cookie-clicker.gb
+state: hidden

@@ -1,0 +1,15 @@
+version: "2.4"
+services:
+  misc-trapped1:
+    cap_add:
+      - LINUX_IMMUTABLE
+    build:
+      context: .
+      args: 
+        FLAG: "utflag{SpeciaL_Permissionz}"
+        USER1: "trapped"
+        PASSWORD1: "password"
+        USER2: "noaccess"
+    ports:
+      - "4301:22"
+    read_only: true

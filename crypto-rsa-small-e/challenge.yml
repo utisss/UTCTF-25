@@ -1,0 +1,18 @@
+name: "RSA"
+category: Cryptography
+description: |
+  Idk why people make e so large for rsa... it's so much easier to just use 3. Why use big number when small number do trick?
+
+  by jocelyn (@jocelyn3270 on discord)
+author: jocelyn
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 300
+  minimum: 100
+flags:
+  - utflag{hmm_maybe_bad_idea}
+files:
+  - rsa.txt
+state: hidden

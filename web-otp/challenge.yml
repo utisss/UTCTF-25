@@ -1,0 +1,19 @@
+name: "OTP"
+category: Web
+description: |
+  Find your One True Pairing on this new site I made!
+
+  This problem resets every 30 minutes.
+
+  By Sasha (@kyrili on discord)
+author: Sasha
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 300
+  minimum: 100
+connection_info: http://challenge.utctf.live:3725
+flags:
+  - utflag{On3_sT3P_4t_4_t1m3}
+state: hidden

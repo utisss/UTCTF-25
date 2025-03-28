@@ -1,0 +1,22 @@
+version: "2.4"
+services:
+  misc-trapped2:
+    restart: always
+    cap_add:
+      - LINUX_IMMUTABLE
+    build:
+      context: .
+      args: 
+        FLAG: "utflag{4ccess_unc0ntroll3d}"
+        USER1: "trapped"
+        PASSWORD1: "password"
+        SECRET_USER: "secretuser"
+        SECRET_PASSWORD: "hunter2"
+    ports:
+      - "4302:22"
+    read_only: true
+    deploy:
+      resources:
+        limits:
+          cpus: "1.5"
+          memory: "500mb"

@@ -1,0 +1,19 @@
+name: "[Beginner] Tic Tac Toe"
+category: Binary Exploitation
+description: |
+  I bet you can't beat me at tic tac toe.
+
+  By Sasha (@kyrili on Discord)
+author: Sasha
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 300
+  minimum: 100
+connection_info: nc challenge.utctf.live 7114
+flags:
+  - utflag{!pr0_g4m3r_4l3rt!}
+files:
+  - tictactoe
+state: hidden

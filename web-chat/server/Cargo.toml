@@ -1,0 +1,51 @@
+[package]
+name = "chat"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+runtime = { git = "https://github.com/ameyer1024/webserver-utils", rev = "f0b80f4103456ba72a4fe646030f9cfa4987ffc7" }
+runtime-axum = { git = "https://github.com/ameyer1024/webserver-utils", rev = "f0b80f4103456ba72a4fe646030f9cfa4987ffc7" }
+
+parking_lot = "0.12"
+fs-err = "3.1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_yaml = "0.9"
+anyhow = "1"
+thiserror = "1"
+governor = "0.8"
+jiff = { version = "0.2.0", features = ["serde"] }
+
+rand = "0.8"
+
+sailfish = { version = "0.8", default-features = false, features = ["derive"] }
+
+tokio = { version = "1.28", features = ["macros", "rt-multi-thread", "signal"] }
+tokio-util = "0.7"
+futures-util = "0.3"
+reqwest = { version = "0.11", default-features = false, features = ["default-tls"] }
+
+dotenvy = "0.15"
+axum = { version = "0.8", features = ["macros", "ws"] }
+axum-server = { version = "0.7", features = [] }
+axum-extra = { version = "0.10", features = ["cookie-private"] }
+tower = { version = "0.5" }
+tower-http = { version = "0.6", features = ["fs", "trace", "catch-panic"] }
+tracing = "0.1.37"
+
+# local-offset feature is fully broken on unix-like systems
+time = { version = "0.3", features = ["serde-human-readable", "macros"] }
+
+url = "2.5"
+rustc-hash = "2.1.1"
+# argon2 = "0.5.3"
+sha2 = "0.10"
+bitflags = "2.9.0"
+
+cssparser = "0.34"
+data-encoding = "2.8.0"
+subtle = "2.6.1"
+
+[profile.release]
+debug = 1

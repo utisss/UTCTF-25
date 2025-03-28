@@ -1,0 +1,20 @@
+name: "Chat"
+category: Web
+description: |
+  A chat server with some 'interesting' features!
+  I wonder how many of them are secure...
+
+  (Send `/help` to get started.)
+
+  By Alex (.alex_._ on discord)
+author: Alex
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 300
+  minimum: 100
+connection_info: http://challenge.utctf.live:5213
+flags:
+  - utflag{32c6FLiaX5in9MhkPNDeYBUY}
+state: hidden

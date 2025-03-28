@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Number Champ</title>
+    <script>
+      let userUUID=null,opponentUUID=null;var lat=0,lon=0;async function findMatch(){const e=await fetch(`/match?uuid=${userUUID}&lat=${lat}&lon=${lon}`,{method:"POST"}),t=await e.json();t.error?alert(t.error):(opponentUUID=t.uuid,document.getElementById("match-info").innerText=`Matched with ${t.user} (Elo: ${t.elo}, Distance: ${Math.round(t.distance)} miles)`,document.getElementById("match-section").style.display="none",document.getElementById("battle-section").style.display="block")}async function battle(){const e=document.getElementById("number-input").value;if(!e)return void alert("Please enter a number.");const t=await fetch(`/battle?uuid=${userUUID}&opponent=${opponentUUID}&number=${e}`,{method:"POST"}),n=await t.json();n.error?alert(n.error):(document.getElementById("battle-result").innerText=`Result: ${n.result}. Opponent's number: ${n.opponent_number}. Your new Elo: ${n.elo}`,document.getElementById("user-info").innerText=`Your updated Elo: ${n.elo}`,document.getElementById("battle-section").style.display="none",document.getElementById("match-section").style.display="block")}window.onload=async()=>{if(navigator.geolocation)navigator.geolocation.getCurrentPosition((async e=>{lat=e.coords.latitude,lon=e.coords.longitude;const t=await fetch(`/register?lat=${lat}&lon=${lon}`,{method:"POST"}),n=await t.json();userUUID=n.uuid,document.getElementById("user-info").innerText=`Welcome, ${n.user}! Elo: ${n.elo}`}));else{alert("Geolocation is not supported by this browser.");const e=await fetch(`/register?lat=${lat}&lon=${lon}`,{method:"POST"}),t=await e.json();userUUID=t.uuid,document.getElementById("user-info").innerText=`Welcome, ${t.user}! Elo: ${t.elo}`}};
+    </script>
+  </head>
+  <body class="bg-light d-flex justify-content-center align-items-center vh-100 text-center">
+    <div>
+      <div class="container mt-5">
+        <h1 class="display-4 text-primary">Number Champ</h1>
+        <p class="lead text-secondary">Be the best. Show your opponent a higher number</p>
+        <p id="user-info" class="text-success">Loading...</p>
+        <img src="https://static.scientificamerican.com/sciam/cache/file/536BBA71-E627-4DB0-95D3A37002DB1CFD_source.jpg?w=600" class="img-fluid" style="max-width: 300px;" />
+      </div>
+      <div id="match-section" class="container mt-4">
+        <p id="battle-result" class="text-info"></p>
+        <button class="btn btn-primary" onclick="findMatch()">Find Match</button>
+      </div>
+      <div id="battle-section" class="container mt-4" style="display: none;">
+        <p id="match-info" class="text-danger"></p>
+        <h2 class="text-danger">Battle</h2>
+        <div class="input-group mb-3">
+          <input id="number-input" type="number" class="form-control" placeholder="Enter your number" />
+          <button class="btn btn-success" onclick="battle()">Submit</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

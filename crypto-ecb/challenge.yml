@@ -1,0 +1,20 @@
+name: "Espathra-Csatu-Banette"
+category: Cryptography
+description: |
+  Everyone keeps telling me how ECB isn't meta-viable and that I should stop playing it to tournaments.
+  Well, I love ECB so I've added some new tech that should hopefully get me some better results!
+
+  By Sasha (@kyrili on discord)
+author: Sasha
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 300
+  minimum: 100
+connection_info: nc challenge.utctf.live 7150
+flags:
+  - utflag{st0p_r0ll1ng_y0ur_0wn_crypt0!!}
+files:
+  - src/main.py
+state: hidden

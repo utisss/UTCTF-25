@@ -1,0 +1,21 @@
+name: "Finally, an un-strings-able problem"
+category: Misc
+description: |
+  I inherited this really cursed disk image recently. All the files seem to be corrupted and I can't
+  even read some of them. What the heck is going on?
+
+  https://cdn.utctf.live/disk.img
+
+  By Sasha (@kyrili on discord)
+author: Sasha
+value: 0
+type: dynamic
+extra:
+  initial: 1000
+  decay: 300
+  minimum: 100
+files:
+  - disk.img
+flags:
+  - "utflag{3xp3rt_f0r3ns1c_4n4lys1s_:3c}"
+state: hidden
